@@ -2,36 +2,166 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jahir Sayyad - Cloud DevOps Engineer</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
+<!-- Particle Background -->
+<div class="particle-container" id="particleContainer"></div>
+
 <header>
-  <nav>
-    <h2 class="logo">Jahir.dev</h2>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <h2>Jahir<span>.dev</span></h2>
+      </div>
+      
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 </header>
 
 <section class="section">
+  <h1><i class="fas fa-envelope" style="margin-right: 15px;"></i>Get In Touch</h1>
 
-  <h1>Contact Me</h1>
+  <p style="text-align: center; font-size: 1.1rem; color: #a0a0a0; margin: 20px 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+    Have an exciting project or opportunity? I'd love to hear from you. Let's connect and explore how I can help you achieve your goals!
+  </p>
 
-  <form class="form">
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Message"></textarea>
-    <button class="btn">Send</button>
-  </form>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin: 60px 0; max-width: 900px; margin-left: auto; margin-right: auto;">
+
+    <!-- Email -->
+    <div class="contact-card fade-in-up" style="text-align: center; padding: 30px; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 255, 0.05)); border-radius: 15px; border: 1px solid rgba(0, 212, 255, 0.2);">
+      <div style="font-size: 2.5rem; color: #00d4ff; margin-bottom: 15px;">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <h3 style="margin-bottom: 10px;">Email</h3>
+      <p style="color: #a0a0a0; margin-bottom: 15px;">jahirsayyed07@gmail.com</p>
+      <a href="mailto:jahirsayyed07@gmail.com" class="btn btn-outline" style="justify-content: center; width: fit-content; margin: 0 auto;">
+        Send Email
+      </a>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="contact-card fade-in-up" style="text-align: center; padding: 30px; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 255, 0.05)); border-radius: 15px; border: 1px solid rgba(0, 212, 255, 0.2);">
+      <div style="font-size: 2.5rem; color: #00d4ff; margin-bottom: 15px;">
+        <i class="fab fa-linkedin"></i>
+      </div>
+      <h3 style="margin-bottom: 10px;">LinkedIn</h3>
+      <p style="color: #a0a0a0; margin-bottom: 15px;">Connect on LinkedIn</p>
+      <a href="#" class="btn btn-outline" style="justify-content: center; width: fit-content; margin: 0 auto;" target="_blank">
+        Visit Profile
+      </a>
+    </div>
+
+    <!-- GitHub -->
+    <div class="contact-card fade-in-up" style="text-align: center; padding: 30px; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 255, 0.05)); border-radius: 15px; border: 1px solid rgba(0, 212, 255, 0.2);">
+      <div style="font-size: 2.5rem; color: #00d4ff; margin-bottom: 15px;">
+        <i class="fab fa-github"></i>
+      </div>
+      <h3 style="margin-bottom: 10px;">GitHub</h3>
+      <p style="color: #a0a0a0; margin-bottom: 15px;">View my projects</p>
+      <a href="#" class="btn btn-outline" style="justify-content: center; width: fit-content; margin: 0 auto;" target="_blank">
+        Visit GitHub
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Contact Form -->
+  <div style="max-width: 600px; margin: 80px auto;">
+    <h2 style="text-align: center; margin-bottom: 40px;">Send Me a Message</h2>
+    
+    <form class="form" id="contactForm">
+      <div style="margin-bottom: 20px;">
+        <label for="name" style="display: block; margin-bottom: 8px; color: #a0a0a0; font-weight: 500;">Full Name</label>
+        <input type="text" id="name" placeholder="Your Name" required style="width: 100%;">
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label for="email" style="display: block; margin-bottom: 8px; color: #a0a0a0; font-weight: 500;">Email Address</label>
+        <input type="email" id="email" placeholder="your.email@example.com" required style="width: 100%;">
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label for="subject" style="display: block; margin-bottom: 8px; color: #a0a0a0; font-weight: 500;">Subject</label>
+        <input type="text" id="subject" placeholder="Project Inquiry" required style="width: 100%;">
+      </div>
+
+      <div style="margin-bottom: 30px;">
+        <label for="message" style="display: block; margin-bottom: 8px; color: #a0a0a0; font-weight: 500;">Message</label>
+        <textarea id="message" placeholder="Tell me about your project or opportunity..." required style="width: 100%;"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+        <i class="fas fa-paper-plane"></i> Send Message
+      </button>
+    </form>
+
+    <p id="formMessage" style="text-align: center; margin-top: 20px; display: none;"></p>
+  </div>
+
+  <!-- Contact Info Cards -->
+  <div style="margin-top: 80px; padding-top: 60px; border-top: 1px solid rgba(0, 212, 255, 0.1);">
+    <h2 style="text-align: center; margin-bottom: 40px;">Other Ways to Connect</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
+
+      <div class="card fade-in-up" style="text-align: center;">
+        <i class="fas fa-phone" style="font-size: 2rem; color: #00d4ff; margin-bottom: 15px; display: block;"></i>
+        <h3 style="margin-bottom: 10px;">Call/WhatsApp</h3>
+        <p style="color: #a0a0a0;">+91 XXXX XXXX XX</p>
+      </div>
+
+      <div class="card fade-in-up" style="text-align: center;">
+        <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #00d4ff; margin-bottom: 15px; display: block;"></i>
+        <h3 style="margin-bottom: 10px;">Location</h3>
+        <p style="color: #a0a0a0;">India</p>
+      </div>
+
+      <div class="card fade-in-up" style="text-align: center;">
+        <i class="fas fa-clock" style="font-size: 2rem; color: #00d4ff; margin-bottom: 15px; display: block;"></i>
+        <h3 style="margin-bottom: 10px;">Response Time</h3>
+        <p style="color: #a0a0a0;">Within 24 hours</p>
+      </div>
+
+    </div>
+  </div>
 
 </section>
 
+<script src="script.js"></script>
+<script>
+// Form submission handler
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formMessage = document.getElementById('formMessage');
+  formMessage.style.display = 'block';
+  formMessage.textContent = '✅ Thank you! I\'ll get back to you soon.';
+  formMessage.style.color = '#00ff88';
+  
+  this.reset();
+  
+  setTimeout(() => {
+    formMessage.style.display = 'none';
+  }, 5000);
+});
+</script>
 </body>
 </html>
